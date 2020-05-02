@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+<link href="{% static 'home/style.css' %}" rel="stylesheet">
+</head>
+<html>
+	<body>
+		<center>
+			Registration Form to Join solarPV.
+			<br>
+			Required fields are denoted by *
+			<br>
+			<table>
+				<form target="" action="/API/API/"method="post">{% csrf_token %}
+					<td>Username</td><td><input type="text" placeholder="required" name="userID" maxlength="8" required value = "{{userID}}"/>*</td></tr>
+
+					<td>First Name</td><td><input type="text" placeholder="required" name = "firstName"required value = "{{firstName}}"/>*</td></tr>
+					<td>Company</td><td><input type="text" placeholder="required" name = "company"required value = "{{company}}"/>*</td></tr>
+					<td>Middle Name</td><td><input type="text"name = "middleName" value = "{{middleName}}"/></td></tr>
+					<td>Last Name</td><td><input type="text"name = "lastName" placeholder="required" required value = "{{lastName}}"/>*</td></tr>
+					<td>Job Title</td><td><input type="text"name = "jobTitle" value = "{{jobTitle}}"/></td></tr>
+					<td>Email Address</td><td><input type="text"name = "email" value = "{{email}}"/></td></tr>
+					<td>Office Phone</td><td><input type="text"name = "officePhone" value = "{{officePhone}}"/></td></tr>
+					<td>Cell Phone</td><td><input type="text"name = "cellPhone" value = "{{cellPhone}}"/></td></tr>
+					<td>Prefix</td><td><select name="prefix" value = "{{prefix}}">
+						<option value="DR">DR</option>
+						<option value="Mr">Mr</option>
+						<option value="Ms">Ms</option>
+						<option value="Mrs">Mrs</option>
+					<td><input type="submit" value="OK"></td>
+				</form>
+			</table>
+		</center>
+	</body>
+</html>

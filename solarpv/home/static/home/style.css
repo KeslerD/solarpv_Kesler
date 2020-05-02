@@ -1,0 +1,49 @@
+body{
+background-color: #e3fff7;
+}
+#titlebar{
+background-color: #a2a8b3;
+width: 100%;
+}
+@keyframes logomove{
+0% {left:0;}
+10%{left:20%;}
+20%{left:40%;}
+30%{left:60%;}
+40%{left:80%;}
+50%{left:80%;}
+60%{left:80%;}
+70%{left:60%;}
+80%{left:40%;}
+90%{left:20%;}
+100%{left:0%;}
+}
+#logo{
+position: relative;
+width: 15%;
+animation-name: logomove;
+animation-duration: 8s;
+}
+#sidebar{
+color: orange;
+position: absolute;
+width:15%;
+left: 10px;
+height:100%;
+background-color: grey;
+}
+#mainsection{
+position: absolute;
+left: 16%;
+width: 75%;
+height: 75%;
+}
+.button{
+width: 15%;
+background-color:darkorange;
+}
+.button:hover{
+background-color: orange;
+opacity: .5;
+font-weight: bold;
+}

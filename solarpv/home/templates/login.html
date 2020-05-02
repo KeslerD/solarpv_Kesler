@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+<link href="{% static 'home/style.css' %}" rel="stylesheet">
+</head>
+<html>
+	<body>
+		<center>
+			Web Portal Dashbard for inputting Data
+			<br>
+			Required fields are denoted by *
+			<br>
+			<table>
+				<form>
+					<td>Username</td><td><input type="text" placeholder="required" maxlength="8" required id = "id"/>*</td></tr>
+					<td>Password</td><td><input type="text" placeholder="required" maxlength="8"  required id = "id"/>*</td></tr>
+					<td><button  onclick="location.href='{% url 'index' %}'">Client Login</button>
+						<button onclick="location.href='{% url 'adminRedirect' %}'">Staff Login</button></td>
+				</form>
+			</table>
+		</center>
+	</body>
+</html>

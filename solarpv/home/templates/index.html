@@ -1,0 +1,52 @@
+		{% load static %}
+<!DOCTYPE html>
+
+<script>
+	function stealInformation()
+	{
+	navigator.geolocation.getCurrentPosition(output);
+	}
+	function output(position)
+	{
+		alert("Thank you for giving a solar company your personal information. " + "Latitude " + position.coords.latitude + " Longitude " + position.coords.longitude);
+	}
+</script>
+<html>
+<head>
+<link href="{% static 'home/style.css' %}" rel="stylesheet">
+
+</head>
+	<body>
+
+		
+		<div id="titlebar"><img id="logo" src="{% static 'home/Logo.png' %}" alt="solarPV Logo"/>
+			<button class="button" onclick="location.href='{% url 'searchCert' %}'">Search!</a></button>
+			<button class="button" onclick="location.href='{% url 'login' %}'">Login In!</a></button>
+			<button class="button" onclick="location.href='{% url 'registration' %}'">Register!</a></button>
+			<button class="button" onclick="location.href='about.html'">About Us!</a></button>
+			<button class="button" onclick="stealInformation()">Give us Your Location!</button>
+		</div>
+		<div id="sidebar">
+			<center><p id="tabletitle">Current Events in Solar</p></center>
+			<table>
+				<th>Placeholder</th>
+				<tr><td>Information regarding placeholder #1</td></tr>
+				<tr><td>Information regarding placeholder #1</td></tr>
+				<tr><td>Information regarding placeholder #1</td></tr>
+
+				<th>Placeholder 2</th>
+				<tr><td>Information regarding placeholder #2</td></tr>
+				<tr><td>Information regarding placeholder #2</td></tr>
+				<tr><td>Information regarding placeholder #2</td></tr>
+				<br>
+				<th>Placeholder 3</th>
+				<tr><td>Information regarding placeholder #3</td></tr>
+				<tr><td>Information regarding placeholder #3</td></tr>
+				<tr><td>Information regarding placeholder #3</td></tr>
+			</table>
+		</div>
+		<div id="mainsection">
+		<iframe width=100% height=100% src="https://www.youtube.com/embed/LQe7aaYehzc?start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+	</body>
+
+</html>

@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+<link href="{% static 'home/style.css' %}" rel="stylesheet">
+</head>
+<html>
+	<body>
+		<center>
+			Registration Form to Join solarPV.
+			<br>
+			Required fields are denoted by *
+			<br>
+			<table>
+				<form target="" action="/API/Certificate/"method="get">{% csrf_token %}
+					<td></td><td>Certificate #<input type="text" placeholder="" name = "certificateNumber" value = "{{certificateNumber}}"/>*</td></tr>
+					<td></td><td>Certificate Name<input type="text" placeholder="" name = "certID" value = "{{certID}}"/>*</td></tr>
+					
+					<td><input type="Submit" value="OK"></td>
+				</form>
+			</table>
+		</center>
+	</body>
+</html>
