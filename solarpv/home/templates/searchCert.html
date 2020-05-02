@@ -11,10 +11,9 @@
 			Required fields are denoted by *
 			<br>
 			<table>
-				<form target="" action="/API/Certificate/"method="get">{% csrf_token %}
-					<td></td><td>Certificate #<input type="text" placeholder="" name = "certificateNumber" value = "{{certificateNumber}}"/>*</td></tr>
-					<td></td><td>Certificate Name<input type="text" placeholder="" name = "certID" value = "{{certID}}"/>*</td></tr>
-					
+				<form target="" action="/API/Certificate/"method="search">
+					<td></td><td>Search Certificate Number or Name<input type="text" placeholder="" name = "search" value = "{{search}}"/>*</td></tr>
+
 					<td><input type="Submit" value="OK"></td>
 				</form>
 			</table>

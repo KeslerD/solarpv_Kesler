@@ -13,6 +13,3 @@ def login(request):
 
 def searchCert(request):
     return render(request,'searchCert.html')
-
-def adminRedirect(request):
-    return render(request,'admin.html')
